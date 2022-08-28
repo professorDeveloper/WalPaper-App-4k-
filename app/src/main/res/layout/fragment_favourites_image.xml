@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.my_favourites.FavouritesImageFragment">
+
+    <ImageView
+        android:id="@+id/home_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/aaaaa"
+        android:scaleType="centerCrop" />
+
+    <io.alterac.blurkit.BlurLayout
+        android:layout_width="50dp"
+        app:blk_blurRadius="12"
+        app:blk_cornerRadius="25dp"
+        android:id="@+id/back_to_home_fragment"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/back_to_home_fragment1"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_left_arrow" />
+
+    </io.alterac.blurkit.BlurLayout>
+
+    <io.alterac.blurkit.BlurLayout
+        android:layout_width="50dp"
+        app:blk_blurRadius="12"
+        android:id="@+id/home_image_info_btn"
+        app:blk_cornerRadius="25dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_height="50dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/home_image_info_btn1"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_info_btn" />
+
+    </io.alterac.blurkit.BlurLayout>
+
+
+
+    <io.alterac.blurkit.BlurLayout
+        android:layout_width="50dp"
+        app:blk_blurRadius="12"
+        app:blk_cornerRadius="25dp"
+        android:id="@+id/home_image_share_btn"
+        app:layout_constraintRight_toLeftOf="@id/home_image_info_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_height="50dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/home_image_share_btn1"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_share_btn" />
+
+    </io.alterac.blurkit.BlurLayout>
+
+    <io.alterac.blurkit.BlurLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/home_image_download_btn"
+        app:layout_constraintRight_toLeftOf="@id/home_image_share_with_btn"
+        android:layout_width="50dp"
+        app:blk_blurRadius="12"
+        app:blk_cornerRadius="25dp"
+        android:layout_height="50dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/home_image_download_btn1"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_download" />
+
+    </io.alterac.blurkit.BlurLayout>
+
+    <io.alterac.blurkit.BlurLayout
+        android:layout_width="50dp"
+        app:blk_blurRadius="12"
+        app:blk_cornerRadius="25dp"
+        android:id="@+id/home_image_share_with_btn"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintRight_toLeftOf="@id/home_image_edit_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/home_image_download_btn"
+        android:layout_height="50dp" >
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/home_image_share_with_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_share_with" />
+
+    </io.alterac.blurkit.BlurLayout>
+
+    <io.alterac.blurkit.BlurLayout
+        android:layout_width="50dp"
+        app:blk_blurRadius="12"
+        app:blk_cornerRadius="25dp"
+        android:id="@+id/home_image_edit_btn"
+        app:layout_constraintRight_toLeftOf="@id/home_image_like_btn"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/home_image_share_with_btn"
+        android:layout_height="50dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/home_image_edit_btn1"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_edit" />
+
+    </io.alterac.blurkit.BlurLayout>
+
+    <io.alterac.blurkit.BlurLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/home_image_like_btn"
+        app:layout_constraintLeft_toRightOf="@id/home_image_edit_btn"
+        android:layout_width="50dp"
+        app:blk_blurRadius="12"
+        app:blk_cornerRadius="25dp"
+        android:layout_height="50dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/home_image_like_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_heart_liked" />
+
+    </io.alterac.blurkit.BlurLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

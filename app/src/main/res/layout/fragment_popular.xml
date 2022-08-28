@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#011627"
+    android:layout_height="match_parent"
+    tools:context=".ui.gallery.PopularFragment">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:id="@+id/tab_layout"
+        app:tabIndicatorHeight="0dp"
+        app:tabRippleColor="@null"
+        app:tabMode="scrollable"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#011627"
+        app:tabTextColor="@android:color/white"
+        android:layout_height="wrap_content" />
+
+    <io.alterac.blurkit.BlurLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:blk_cornerRadius="35dp"
+        app:blk_blurRadius="3"
+        android:background="@android:color/transparent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/popular_bottom_navigation_view"
+            android:layout_width="match_parent"
+            app:menu="@menu/bottom_menu"
+            app:labelVisibilityMode="unlabeled"
+            android:background="@drawable/bottom_sheet_radius"
+            android:layout_height="match_parent" />
+
+    </io.alterac.blurkit.BlurLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

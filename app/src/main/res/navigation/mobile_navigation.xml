@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="uz.revolution.a4kfullwallpapers.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            app:popUpTo="@id/nav_home"
+            android:id="@+id/action_nav_home_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            app:popUpTo="@id/nav_home"
+            android:id="@+id/action_nav_home_to_nav_popular"
+            app:destination="@id/nav_popular" />
+        <action
+            app:popUpTo="@id/nav_home"
+            android:id="@+id/action_nav_home_to_nav_random"
+            app:destination="@id/nav_random" />
+        <action
+            app:popUpTo="@id/nav_home"
+            android:id="@+id/action_nav_home_to_myFavourites"
+            app:destination="@id/nav_liked" />
+        <action
+            android:id="@+id/action_nav_home_to_historyFragment"
+            app:destination="@id/nav_history" />
+        <action
+            android:id="@+id/action_nav_home_to_aboutFragment"
+            app:destination="@id/nav_about" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_popular"
+        android:name="uz.revolution.a4kfullwallpapers.ui.gallery.PopularFragment"
+        android:label="@string/popular"
+        tools:layout="@layout/fragment_popular" />
+
+    <fragment
+        android:id="@+id/nav_random"
+        android:name="uz.revolution.a4kfullwallpapers.ui.slideshow.RandomFragment"
+        android:label="@string/random"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="uz.revolution.a4kfullwallpapers.ui.home.CategoryFragment"
+        android:label="home_fragment_category"
+        tools:layout="@layout/home_fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_homeImageFragment"
+            app:destination="@id/homeImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeImageFragment"
+        android:name="uz.revolution.a4kfullwallpapers.ui.home.HomeImageFragment"
+        android:label="fragment_home_image"
+        tools:layout="@layout/fragment_home_image" >
+        <action
+            android:id="@+id/action_homeImageFragment_to_homeImageFragment2"
+            app:destination="@id/homeImageFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeImageFragment2"
+        android:name="uz.revolution.a4kfullwallpapers.ui.home.HomeImageFragment2"
+        android:label="fragment_home_image2"
+        tools:layout="@layout/fragment_home_image2" />
+    <fragment
+        android:id="@+id/nav_liked"
+        android:name="uz.revolution.a4kfullwallpapers.ui.my_favourites.MyFavourites"
+        android:label="fragment_my_favourites"
+        tools:layout="@layout/fragment_my_favourites" >
+        <action
+            android:id="@+id/action_nav_liked_to_favouritesImageFragment"
+            app:destination="@id/favouritesImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="uz.revolution.a4kfullwallpapers.ui.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="uz.revolution.a4kfullwallpapers.ui.about.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/homeImageFragment3"
+        android:name="uz.revolution.a4kfullwallpapers.ui.my_favourites.HomeImageFragment"
+        android:label="HomeImageFragment" />
+    <fragment
+        android:id="@+id/favouritesImageFragment"
+        android:name="uz.revolution.a4kfullwallpapers.ui.my_favourites.FavouritesImageFragment"
+        android:label="fragment_favourites_image"
+        tools:layout="@layout/fragment_favourites_image" />
+</navigation>
